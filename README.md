@@ -16,11 +16,13 @@ Node Installation
 ```
 
 
-# Clone project repository
+**Clone project repository**
+```
 cd && rm -rf elys
 git clone https://github.com/elys-network/elys
 cd elys
 git checkout v0.51.0
+```
 
 # Build binary
 make install
