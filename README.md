@@ -24,8 +24,10 @@ cd elys
 git checkout v0.51.0
 ```
 
-# Build binary
+**Build binary**
+```
 make install
+```
 
 # Prepare cosmovisor directories
 mkdir -p $HOME/.elys/cosmovisor/genesis/bin
