@@ -29,9 +29,11 @@ git checkout v0.51.0
 make install
 ```
 
-# Prepare cosmovisor directories
+**Prepare cosmovisor directories**
+```
 mkdir -p $HOME/.elys/cosmovisor/genesis/bin
 ln -s $HOME/.elys/cosmovisor/genesis $HOME/.elys/cosmovisor/current -f
+```
 
 # Copy binary to cosmovisor directory
 cp $(which elysd) $HOME/.elys/cosmovisor/genesis/bin
