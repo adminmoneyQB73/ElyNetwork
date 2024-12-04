@@ -35,8 +35,10 @@ mkdir -p $HOME/.elys/cosmovisor/genesis/bin
 ln -s $HOME/.elys/cosmovisor/genesis $HOME/.elys/cosmovisor/current -f
 ```
 
-# Copy binary to cosmovisor directory
+**Copy binary to cosmovisor directory**
+```
 cp $(which elysd) $HOME/.elys/cosmovisor/genesis/bin
+```
 
 # Set node CLI configuration
 elysd config chain-id elystestnet-1
