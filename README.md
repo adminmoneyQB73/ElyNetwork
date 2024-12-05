@@ -40,10 +40,12 @@ ln -s $HOME/.elys/cosmovisor/genesis $HOME/.elys/cosmovisor/current -f
 cp $(which elysd) $HOME/.elys/cosmovisor/genesis/bin
 ```
 
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 elysd config chain-id elystestnet-1
 elysd config keyring-backend test
 elysd config node tcp://localhost:22057
+```
 
 # Initialize the node
 elysd init "Your Node Name" --chain-id elystestnet-1
