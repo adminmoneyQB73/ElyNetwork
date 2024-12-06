@@ -47,8 +47,10 @@ elysd config keyring-backend test
 elysd config node tcp://localhost:22057
 ```
 
-# Initialize the node
+**Initialize the node**
+```
 elysd init "Your Node Name" --chain-id elystestnet-1
+```
 
 # Download genesis and addrbook files
 curl -L https://snapshots-testnet.nodejumper.io/elys/genesis.json > $HOME/.elys/config/genesis.json
