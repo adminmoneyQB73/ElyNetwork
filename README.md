@@ -52,9 +52,11 @@ elysd config node tcp://localhost:22057
 elysd init "Your Node Name" --chain-id elystestnet-1
 ```
 
-# Download genesis and addrbook files
+**Download genesis and addrbook files**
+```
 curl -L https://snapshots-testnet.nodejumper.io/elys/genesis.json > $HOME/.elys/config/genesis.json
 curl -L https://snapshots-testnet.nodejumper.io/elys/addrbook.json > $HOME/.elys/config/addrbook.json
+```
 
 # Set seeds
 sed -i -e 's|^seeds *=.*|seeds = "cdf9ae8529aa00e6e6703b28f3dcfdd37e07b27c@37.187.154.66:26656,86987eeff225699e67a6543de3622b8a986cce28@91.183.62.162:26656,ae22b82b1dc34fa0b1a64854168692310f562136@198.27.74.140:26656,61284a4d71cd3a33771640b42f40b2afda389a1e@5.101.138.254:26656,ae7191b2b922c6a59456588c3a262df518b0d130@elys-testnet-seed.itrocket.net:54656,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,609c64cc50fb4ebbe7cae3347545d3950ea2c018@65.108.195.29:23656,0977dd5475e303c99b66eaacab53c8cc28e49b05@elys-testnet-peer.itrocket.net:38656"|' $HOME/.elys/config/config.toml
