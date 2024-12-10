@@ -68,12 +68,14 @@ sed -i -e 's|^seeds *=.*|seeds = "cdf9ae8529aa00e6e6703b28f3dcfdd37e07b27c@37.18
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.01uelys,0.01ibc/2180E84E20F5679FCC760D8C165B60F42065DEF7F46A72B447CFF1B7DC6C0A65,0.01ibc/E2D2F6ADCC68AA3384B2F5DFACCA437923D137C14E86FB8A10207CF3BED0C8D4"|' $HOME/.elys/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.elys/config/app.toml
+```
 
 # Enable prometheus
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.elys/config/config.toml
