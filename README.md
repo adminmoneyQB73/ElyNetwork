@@ -77,8 +77,10 @@ sed -i \
   $HOME/.elys/config/app.toml
 ```
 
-# Enable prometheus
+**Enable prometheus**
+```
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.elys/config/config.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:22017%; s%:8080%:22080%; s%:9090%:22090%; s%:9091%:22091%; s%:8545%:22045%; s%:8546%:22046%; s%:6065%:22065%" $HOME/.elys/config/app.toml
