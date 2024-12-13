@@ -88,8 +88,10 @@ sed -i -e "s%:1317%:22017%; s%:8080%:22080%; s%:9090%:22090%; s%:9091%:22091%; s
 sed -i -e "s%:26658%:22058%; s%:26657%:22057%; s%:6060%:22060%; s%:26656%:22056%; s%:26660%:22061%" $HOME/.elys/config/config.toml
 ```
 
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots-testnet.nodejumper.io/elys/elys_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.elys"
+```
 
 # Install Cosmovisor
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
