@@ -93,8 +93,10 @@ sed -i -e "s%:26658%:22058%; s%:26657%:22057%; s%:6060%:22060%; s%:26656%:22056%
 curl "https://snapshots-testnet.nodejumper.io/elys/elys_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.elys"
 ```
 
-# Install Cosmovisor
+**Install Cosmovisor**
+```
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
+```
 
 # Create a service
 sudo tee /etc/systemd/system/elys.service > /dev/null << EOF
