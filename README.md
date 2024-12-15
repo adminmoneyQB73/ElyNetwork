@@ -98,7 +98,8 @@ curl "https://snapshots-testnet.nodejumper.io/elys/elys_latest.tar.lz4" | lz4 -d
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/elys.service > /dev/null << EOF
 [Unit]
 Description=Elys Network node service
@@ -119,6 +120,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable elys.service
+```
 
 # Start the service and check the logs
 sudo systemctl start elys.service
